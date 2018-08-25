@@ -264,7 +264,8 @@ p {
 	right:25px;
 	bottom: 15px;
 }
-.social-links-conatainer{
+.social-links-container {
+	z-index: 50000;
 	position: relative;
 	top: 10px;
 }
@@ -725,7 +726,6 @@ p {
 .homepage-image-container {
 	z-index: 0;
 	margin-top: -30px;
-	background: white url('../img/homepage_img_bg.png') bottom repeat-x;
 	img {
 		margin: 0 auto;
 	}

@@ -46,7 +46,6 @@ function csvJSON(csv){
 	  }
 	  result.push(obj);
   }
-  console.log(result);
   var data = JSON.stringify(result); //JSON
   test(result);
 }
@@ -73,7 +72,7 @@ $(document).ready(function(){
 //scroll to animation
 $("a[href^='#']").click(function(e) {
 	e.preventDefault();
-	
+
 	var position = $($(this).attr("href")).offset().top;
 
 	$("body, html").animate({

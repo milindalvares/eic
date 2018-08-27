@@ -748,9 +748,15 @@ p {
 	margin: 0;
 }
 .navbar-main-index .nav-items:hover{
-	color: black !important;
+	color: inherit !important;
+/*	transform: scale(2) !important;*/
+	/*font-size: 1.1rem;*/
 }
-
+.navbar-main-index .nav-items-outer:hover{
+	color: inherit !important;
+	transform: scale(1.2) !important;
+	/*font-size: 1.1rem;*/
+}
 /*Animation to home page profile links */
 
 .profile-links{

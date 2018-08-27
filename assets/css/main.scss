@@ -190,7 +190,7 @@ p {
 	line-height: 1;
 	font-family: lato;
 	h1 {
-		font-size:72px;
+		font-size:6vw;
 		font-family: Oswald;
 	}
 	span {
@@ -203,7 +203,7 @@ p {
 }
 .azeem-link{
 	position: relative;
-	bottom: 90px;
+	bottom: 115px;
 	a {
 		background-color: #1fafbc;
 
@@ -266,7 +266,7 @@ p {
 .social-links-container {
 	z-index: 50000;
 	position: relative;
-	top: 10px;
+	top: 20px;
 }
 
 .drop-up{
@@ -671,6 +671,7 @@ p {
 	}
 	.title h1{
 		font-size:7vw;
+
 	}
 	.comedy-nav-links{
 		text-align: center;
@@ -725,7 +726,7 @@ p {
 .homepage-image-container {
 	z-index: 0;
 	margin-top: -30px;
-	background: white url('../img/eic_home.jpg') no-repeat;
+	background: white url('../img/eic_home2.png') no-repeat;
 	background-size: contain;
 	background-position: center bottom;
 	padding-top: 700px;
@@ -777,7 +778,7 @@ p {
 	   		transform: translateY(0px);
    		}
 }
-
+/*
 .azeem-link a{
 	animation-name: pop_in_bottom;
 	animation-duration: 300ms;
@@ -847,7 +848,7 @@ p {
 	animation-fill-mode:forwards;
 	animation-duration: 300ms;
 	animation-delay: 1500ms;
-}
+}*/
 @keyframes pop_in_bottom {
 
     from   {
@@ -874,4 +875,31 @@ p {
 	display: inline-block;
 	padding-left: 20px;
 	padding-right: 20px;
+}
+.logo_img{
+	position: absolute;
+	top: -10px;
+	padding: 0;
+	z-index: 5000;
+	width: 130px;
+	height: 130px;
+}
+
+.text-shadows{
+	/*text-shadow: 0 0 1px black;*/
+}
+.test{
+	position: absolute;
+	font-size: 6vw;
+	text-align: center;
+	margin: auto;
+	width: 100%;	
+	z-index: -1;
+}
+.test h1{
+	font-size: 7vw;
+	/*text-shadow: 0 0 1px black;*/
+
+
+	/*transform: rotate(25deg);*/
 }

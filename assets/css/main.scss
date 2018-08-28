@@ -204,9 +204,15 @@ p {
 }
 .main-img {
 	margin-top: -100px;
+	animation-name: pop_in_bottom;
+	opacity: 0;
+	animation-fill-mode:forwards;
+	animation-duration: 1000ms;
+	animation-delay: 2500ms;
 	img {
 		max-width: 100%;
 	}
+
 }
 .azeem-link{
 	position: relative;
@@ -273,6 +279,11 @@ p {
 	z-index: 50000;
 	position: relative;
 	top: 20px;
+	animation-name: animations_top;
+	opacity: 0;
+	animation-fill-mode:forwards;
+	animation-duration: 1000ms;
+	animation-delay: 3800ms;
 }
 
 .drop-up{
@@ -584,14 +595,6 @@ p {
   	animation-iteration-count: infinite;
   	animation-timing-function: linear;
 }*/
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
 
 @media only screen and (max-width: 600px) {
 	.nav-inner-container{
@@ -600,6 +603,8 @@ p {
 	}
 	.logo-container{
 		text-align: center;
+		display: block;
+		margin: auto;
 	}
 	.contact-info{
 		padding-right: 0;
@@ -719,6 +724,50 @@ p {
 		text-decoration: none;
 		color: black;
 	}
+	.logo_img{
+		position: static !important;
+		display: block;
+		margin: auto;
+	}
+
+	.navbar-main-index {
+		color: black !important;
+		position: static !important;
+			background: #81bb40;
+	}
+	.nav-outer-container{
+		color: black !important;
+		position: static !important;
+	}
+	.nav-inner-container ul{
+		padding: 0;
+		text-align: center;
+	}
+	.nav-block{
+		display: block;
+		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.social-links-container{
+		top: 0;
+	}
+	.nav-outer-container{
+		padding-top: 50px !important; 
+	}
+
+	.nav-outer-container{
+	background-color: #f9f9f8;
+
+		.nav-inner-container{
+			position: static;
+		}
+	}
+		html {
+			  touch-action: manipulation;
+			}
 }
 
 .block {
@@ -735,12 +784,22 @@ p {
 
 #masthead {
 	margin-top: 2rem;
+	opacity: 0;
+	animation-name: fadein;
+	animation-fill-mode:forwards;
+	animation-duration: 1600ms;
+	animation-delay: 400ms;
 }
 
 .navbar-main-index {
 	background: #81bb40a1;
 	/*padding: 25px 0;*/
 	color: white;
+	animation-name: animations_top;
+	opacity: 0;
+	animation-fill-mode:forwards;
+	animation-duration: 1000ms;
+	animation-delay:3800ms;
 }
 
 .homepage-image-container {
@@ -751,6 +810,11 @@ p {
 #profile-links-wrap {
 	position: absolute;
 	margin-top: -150px;
+	animation-name: fadein;
+	opacity: 0;
+	animation-fill-mode:forwards;
+	animation-duration: 1000ms;
+	animation-delay: 3800ms;
 }
 
 .line-height-1{
@@ -769,106 +833,36 @@ p {
 	transform: scale(1.2) !important;
 	/*font-size: 1.1rem;*/
 }
-/*Animation to home page profile links */
 
-.profile-links{
-	/*animation-name: animations_top ;
-	animation-duration: 3s;*/
+
+@keyframes zoomin {
+
+    0%   {
+    		opacity: 0;
+    		transform: scale(.8);
+    	}
+   100% {
+	   		opacity: 1;
+	   		transform: scale(1);
+   		}
 }
 @keyframes animations_top {
 
     0%   {
     		opacity: 0;
-    		transform: translateY(-300px);
+    		transform: translateY(-50px);
     	}
-   50% {
-    		opacity: .5;
-    		transform: translateY(20px);
-      	}
    100% {
 	   		opacity: 1;
 	   		transform: translateY(0px);
    		}
 }
-/*
-.azeem-link a{
 
-
-.azeem-link {
-	animation-name: pop_in_bottom;
-	animation-duration: 300ms;
-	opacity: 0;
-	animation-fill-mode:forwards;
-}
-.sapan-link a{
-	animation-name: pop_in_bottom;
-	animation-duration: 300ms;
-	opacity: 0;
-	animation-fill-mode:forwards;
-	animation-delay: 300ms;
-}
-.angad-link a{
-	animation-name: pop_in_bottom;
-	animation-duration: 300ms;
-	opacity: 0;
-	animation-fill-mode:forwards;
-	animation-delay: 600ms;
-}
-.kunal-link a{
-	animation-name: pop_in_bottom;
-	animation-duration: 300ms;
-	opacity: 0;
-	animation-fill-mode:forwards;
-	animation-delay: 900ms;
-}
-.sahil-link a{
-	animation-name: pop_in_bottom;
-	animation-duration: 300ms;
-	opacity: 0;
-	animation-fill-mode:forwards;
-	animation-delay: 1200ms;
-}
-
-.azeem-text{
-	animation-name: fadein;
-	opacity: 0;
-	animation-fill-mode:forwards;
-	animation-duration: 300ms;
-	animation-delay: 300ms;
-}
-.sapan-text{
-	animation-name: fadein;
-	opacity: 0;
-	animation-fill-mode:forwards;
-	animation-duration: 300ms;
-	animation-delay: 600ms;
-}
-.angad-text{
-	animation-name: fadein;
-	opacity: 0;
-	animation-fill-mode:forwards;
-	animation-duration: 300ms;
-	animation-delay: 900ms;
-}
-.kunal-text{
-	animation-name: fadein;
-	opacity: 0;
-	animation-fill-mode:forwards;
-	animation-duration: 300ms;
-	animation-delay: 1200ms;
-}
-.sahil-text{
-	animation-name: fadein;
-	opacity: 0;
-	animation-fill-mode:forwards;
-	animation-duration: 300ms;
-	animation-delay: 1500ms;
-}*/
 @keyframes pop_in_bottom {
 
     from   {
     		opacity: 0;
-    		transform: translateY(80px);
+    		transform: translateY(50px);
     	}
 
    to {
@@ -894,16 +888,13 @@ p {
 
 .logo_img{
 	position: absolute;
-	top: -10px;
+	top: -10.5px;
 	padding: 0;
 	z-index: 1000;
-	width: 130px;
-	height: 130px;
+	width: 110px;
+	height: 110px;
 }
 
-.text-shadows{
-	/*text-shadow: 0 0 1px black;*/
-}
 .test{
 	position: absolute;
 	font-size: 6vw;
@@ -911,13 +902,6 @@ p {
 	margin: auto;
 	width: 100%;	
 	z-index: -1;
-}
-.test h1{
-	font-size: 7vw;
-	/*text-shadow: 0 0 1px black;*/
-
-
-	/*transform: rotate(25deg);*/
 }
 
 .text-sm {
@@ -931,3 +915,22 @@ p {
 .team-dropdown ul {
 	 list-style: none;
 }
+.logo_nav{
+	width: 110px;
+	height: 110px;
+}
+
+.opacity-0{
+	opacity: 0;
+}
+.footer-box{
+	animation-name: fadein;
+	opacity: 0;
+	animation-fill-mode:forwards;
+	animation-duration: 1000ms;
+	animation-delay: 3800ms;
+
+}
+.nav-inner-container ul{
+		padding: 0;
+	}

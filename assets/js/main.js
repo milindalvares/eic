@@ -74,3 +74,19 @@ $("a[href^='#']").click(function(e) {
 		scrollTop: position
 	},1000 );
 });
+
+$(document).ready(function() {
+      $('form').submit(function(evt){
+      	console.log("inside form");
+      	var $this = $(this);
+		var name = $('#name').val();
+		var email = $('#email').val();
+		var contact = $('#phone').val();
+		var description = $('#description').val();
+		var formdata = $this.serialize();
+
+		console.log(formdata);
+
+          evt.preventDefault();
+      });
+ });

@@ -30,13 +30,13 @@
 				</div>
 			</div>
 			<div class="col-sm-6 text-center pb-5">
-				<form action="#" class="pb-4">
-					<input type="text" class="form-control form-control-lg mb-4" placeholder="Name" name="" required>
-					<input type="text" class="form-control form-control-lg mb-4" placeholder="Email Id" name="" required>
-					<input type="text" class="form-control form-control-lg mb-4" placeholder="Contact number" name="" required>
-					<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Description" rows="4" required></textarea>
+				<form id="contact-us" class="pb-4" >
+					<input type="text" name="name" id="name" class="form-control form-control-lg mb-4" placeholder="Name" required>
+					<input type="email" name="email" id="email" class="form-control form-control-lg mb-4" placeholder="Email Id"  required>
+					<input type="text" name="phone" id="phone" class="form-control form-control-lg mb-4" placeholder="Contact number"  required>
+					<textarea class="form-control" id="description" name="description" placeholder="Description" rows="4" required></textarea>
 					<div class="mt-4">
-						<span class="mail-button-container"><button type="submit" class="mail-button"> Send Mail </button></span>
+						<span class="mail-button-container"><button type="submit" id="submit" class="mail-button"> Send Mail </button></span>
 					</div>
 
 				</form>

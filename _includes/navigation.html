@@ -1,11 +1,11 @@
 <div class="container-fluid nav-inner-container">
-	<ul class="row text-center mb-1">
+	<ul class="row mb-1">
 		<li class="nav-block">
 			<div class="nav-items-outer"><a href="/" title="Home" class="nav-items color-inherit text-uppercase"> Home</a></div>
 		</li>
 		<li class="nav-block">
 			<div class="team-dropdown">
-			  <div class="nav-items-outer"><a title="team" class="nav-items  team-dropbtn color-inherit text-uppercase"> Comedy <i class="fas fa-caret-down"></i></a></div>
+			  <div class="nav-items-outer"><a title="comedy" class="nav-items  team-dropbtn color-inherit text-uppercase"> Comedy <i class="fas fa-caret-down"></i></a></div>
 			  <div class="team-dropdown-content comedy-content dropdown-left-comedy">
   				<a href="/live-comedy" class='d-block text-left comedy-type border-r'>
   					<h3 class="comedy-type-title pt-4 pb-2"> LIVE</h3>
@@ -37,7 +37,7 @@
 		</li>
 		<li class="nav-block">
 			<div class="team-dropdown">
-			  <div class="nav-items-outer" ><a href="/profiles/" title="team" class="nav-items team-dropbtn color-inherit text-uppercase">Team <i class="fas fa-caret-down"></i></a></div>
+			  <div class="nav-items-outer" ><a title="team" class="nav-items team-dropbtn color-inherit text-uppercase">Team <i class="fas fa-caret-down"></i></a></div>
 			  <ul class="team-dropdown-content dropdown-left-team">
 					{% for profile in site.profiles %}
 						<li>

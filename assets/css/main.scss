@@ -306,13 +306,27 @@ p {
 .team-dropdown-up{
 	top: -550px;
 }
+.team-dropdown-content {
+	padding-left: 0;
+
+}
 .team-dropdown-content a {
     color: black;
-    padding-bottom: 5px;
+    padding-top: 5px;
+		padding-bottom: 5px;
     text-decoration: none;
     display: block;
-    /*border:1px solid black;*/
 }
+
+.team-dropdown-content li {
+	line-height: 120%;
+}
+
+.team-dropdown-content li:nth-child(odd) a {
+	background: #fafafa;
+}
+
+
 
 .team-dropdown-content a:hover{
     color: black;
@@ -867,4 +881,12 @@ p {
 	display: inline-block;
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+.text-sm {
+	font-size: 14px;
+}
+
+.text-xs {
+	font-size: 12px;
 }

@@ -1,11 +1,6 @@
-// $(document).ready(function(){
-//     $(".nav-items").click(function(){
-//          $(this).addClass("active");
-//          $(this).parent().parent().find( '.nav-items.active' ).removeClass( 'active' );
-//     });
-// });
 $(document).ready(function(){
 	resizeDiv();
+	var s = skrollr.init();
 
 });
 

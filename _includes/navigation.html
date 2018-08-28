@@ -38,24 +38,26 @@
 		<li class="nav-block">
 			<div class="team-dropdown">
 			  <span ><a href="/profiles/" title="team" class="nav-items team-dropbtn color-inherit">Team <i class="fas fa-caret-down"></i></a></span>
-			  <div class="team-dropdown-content dropdown-left-team">
-				{% for profile in site.profiles %}
-			    <a href="{{profile.url}}">
-			    	<div class="container">
-			    		<div class="row">
-			    			<div class="col-sm-3">
-			    				<img src="{{profile.avatar}}" alt="Avatar" class="avatar">
-			    			</div>
-			    			<div class="col-sm-9 profile-nav-link">
-			    				<h5 class="margin-0 mt-3">{{profile.title}}</h5>
-			    				<p class="text-muted">{{profile.quotes}}</p>
-
-			    			</div>
-			    		</div>
-			    	</div>
-			    </a>
+			  <ul class="team-dropdown-content dropdown-left-team">
+					{% for profile in site.profiles %}
+						<li>
+					    <a href="{{profile.url}}">
+					    	<div class="container">
+					    		<div class="row">
+					    			<div class="col-sm-3">
+					    				<img src="{{profile.avatar}}" alt="Avatar" class="avatar">
+					    			</div>
+					    			<div class="col-sm-9 profile-nav-link">
+					    				<h5 class="margin-0 mt-1 mb-1">{{profile.title}}</h5>
+					    				<p class="mb-0 text-sm">{{profile.quotes}}</p>
+											<span class="text-xs">— {{profile.quotes-author}}</span>
+					    			</div>
+					    		</div>
+					    	</div>
+					    </a>
+						</li>
 			    {% endfor %}
-			  </div>
+			  </ul>
 			</div>
 		</li>
 		<li class="nav-block">

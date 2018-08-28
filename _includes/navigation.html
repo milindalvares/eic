@@ -2,6 +2,7 @@
 	<ul class="row text-center mb-1">
 		<li class="nav-block">
 			<div class="nav-items-outer"><a href="/" title="Home" class="nav-items color-inherit text-uppercase"> Home</a></div>
+			<span><a href="/" title="Home" class="nav-items color-inherit"> Home</a></span>
 		</li>
 		<li class="nav-block">
 			<div class="team-dropdown">
@@ -54,8 +55,27 @@
 			    		</div>
 			    	</div>
 			    </a>
+			  <span ><a href="/profiles/" title="team" class="nav-items team-dropbtn color-inherit">Team <i class="fas fa-caret-down"></i></a></span>
+			  <ul class="team-dropdown-content dropdown-left-team">
+					{% for profile in site.profiles %}
+						<li>
+					    <a href="{{profile.url}}">
+					    	<div class="container">
+					    		<div class="row">
+					    			<div class="col-sm-3">
+					    				<img src="{{profile.avatar}}" alt="Avatar" class="avatar">
+					    			</div>
+					    			<div class="col-sm-9 profile-nav-link">
+					    				<h5 class="margin-0 mt-1 mb-1">{{profile.title}}</h5>
+					    				<p class="mb-0 text-sm">{{profile.quotes}}</p>
+											<span class="text-xs">— {{profile.quotes-author}}</span>
+					    			</div>
+					    		</div>
+					    	</div>
+					    </a>
+						</li>
 			    {% endfor %}
-			  </div>
+			  </ul>
 			</div>
 		</li>
 		<li class="nav-block">
@@ -66,6 +86,13 @@
 		</li>
 		<li class="nav-block">
 			<div class="nav-items-outer"><a href="#contact-us" title="Contact Us" class="color-inherit nav-items text-uppercase"> Contact Us</a></div>
+			<span ><a href="/tickets/" title="Tickets" class="nav-items color-inherit">Tickets</a></span>
+		</li>
+		<li class="nav-block">
+			<span><a href="#" title="Merchandise" class="nav-items color-inherit">Merchandise</a></span>
+		</li>
+		<li class="nav-block">
+			<span><a href="#contact-us" title="Contact Us" class="color-inherit nav-items">Contact Us</a></span>
 		</li>
 	</ul>
 </div>

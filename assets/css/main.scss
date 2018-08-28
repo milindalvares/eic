@@ -190,15 +190,26 @@ p {
 	line-height: 1;
 	font-family: lato;
 	h1 {
+<<<<<<< HEAD
 		font-size:6vw;
+=======
+		font-size:110px;
+>>>>>>> 509227a69685c9d33f99d830f39d82a53e74de00
 		font-family: Oswald;
+		color: #F6A623;
 	}
 	span {
-		font-size: 36px;
+		font-size: 24px;
 		font-weight: 300;
 	}
 	.lead-link {
 		font-size: 18px;
+	}
+}
+.main-img {
+	margin-top: -100px;
+	img {
+		max-width: 100%;
 	}
 }
 .azeem-link{
@@ -206,7 +217,6 @@ p {
 	bottom: 115px;
 	a {
 		background-color: #1fafbc;
-
 	}
 }
 .sapan-link {
@@ -299,13 +309,27 @@ p {
 .team-dropdown-up{
 	top: -550px;
 }
+.team-dropdown-content {
+	padding-left: 0;
+
+}
 .team-dropdown-content a {
     color: black;
-    padding-bottom: 5px;
+    padding-top: 5px;
+		padding-bottom: 5px;
     text-decoration: none;
     display: block;
-    /*border:1px solid black;*/
 }
+
+.team-dropdown-content li {
+	line-height: 120%;
+}
+
+.team-dropdown-content li:nth-child(odd) a {
+	background: #fafafa;
+}
+
+
 
 .team-dropdown-content a:hover{
     color: black;
@@ -725,6 +749,7 @@ p {
 
 .homepage-image-container {
 	z-index: 0;
+<<<<<<< HEAD
 	margin-top: -30px;
 	background: white url('../img/eic_home2.png') no-repeat;
 	background-size: contain;
@@ -734,11 +759,14 @@ p {
 	img {
 		margin: 0 auto;
 	}
+=======
+	margin-top: 0px;
+>>>>>>> 509227a69685c9d33f99d830f39d82a53e74de00
 }
 
 #profile-links-wrap {
 	position: absolute;
-	margin-top: -40px;
+	margin-top: -150px;
 }
 
 .line-height-1{
@@ -778,8 +806,13 @@ p {
 	   		transform: translateY(0px);
    		}
 }
+<<<<<<< HEAD
 /*
 .azeem-link a{
+=======
+
+.azeem-link {
+>>>>>>> 509227a69685c9d33f99d830f39d82a53e74de00
 	animation-name: pop_in_bottom;
 	animation-duration: 300ms;
 	opacity: 0;
@@ -876,6 +909,7 @@ p {
 	padding-left: 20px;
 	padding-right: 20px;
 }
+
 .logo_img{
 	position: absolute;
 	top: -10px;
@@ -902,4 +936,12 @@ p {
 
 
 	/*transform: rotate(25deg);*/
+}
+
+.text-sm {
+	font-size: 14px;
+}
+
+.text-xs {
+	font-size: 12px;
 }

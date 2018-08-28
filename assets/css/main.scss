@@ -190,11 +190,7 @@ p {
 	line-height: 1;
 	font-family: lato;
 	h1 {
-<<<<<<< HEAD
-		font-size:6vw;
-=======
 		font-size:110px;
->>>>>>> 509227a69685c9d33f99d830f39d82a53e74de00
 		font-family: Oswald;
 		color: #F6A623;
 	}
@@ -749,19 +745,7 @@ p {
 
 .homepage-image-container {
 	z-index: 0;
-<<<<<<< HEAD
-	margin-top: -30px;
-	background: white url('../img/eic_home2.png') no-repeat;
-	background-size: contain;
-	background-position: center bottom;
-	padding-top: 700px;
-
-	img {
-		margin: 0 auto;
-	}
-=======
 	margin-top: 0px;
->>>>>>> 509227a69685c9d33f99d830f39d82a53e74de00
 }
 
 #profile-links-wrap {
@@ -806,13 +790,11 @@ p {
 	   		transform: translateY(0px);
    		}
 }
-<<<<<<< HEAD
 /*
 .azeem-link a{
-=======
+
 
 .azeem-link {
->>>>>>> 509227a69685c9d33f99d830f39d82a53e74de00
 	animation-name: pop_in_bottom;
 	animation-duration: 300ms;
 	opacity: 0;
@@ -914,7 +896,7 @@ p {
 	position: absolute;
 	top: -10px;
 	padding: 0;
-	z-index: 5000;
+	z-index: 1000;
 	width: 130px;
 	height: 130px;
 }
@@ -944,4 +926,8 @@ p {
 
 .text-xs {
 	font-size: 12px;
+}
+
+.team-dropdown ul {
+	 list-style: none;
 }

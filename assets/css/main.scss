@@ -695,21 +695,22 @@ p {
 		padding-left: 0;
 	}
 	.title h1{
-		font-size:7vw;
+		font-size:9vw;
 
 	}
-	.comedy-nav-links{
+/*	.comedy-nav-links{
 		text-align: center;
-	}
+	}*/
 	.team-dropdown-content{
 		min-width: 100%;
 		left: 0;
+		top: auto;
 	}
 	.profile-nav-link{
 		text-align: center;
 	}
 	.mobile-hidden{
-		display: none;
+		display: none !important;
 	}
 	.mobile-menu{
 		display: block;
@@ -752,22 +753,45 @@ p {
 		padding-right: 0;
 	}
 	.social-links-container{
-		top: 0;
+		top: -370px;
 	}
 	.nav-outer-container{
 		padding-top: 50px !important; 
 	}
 
 	.nav-outer-container{
-	background-color: #f9f9f8;
+		background-color: #f9f9f8;
 
 		.nav-inner-container{
 			position: static;
 		}
 	}
-		html {
-			  touch-action: manipulation;
-			}
+	#masthead h1{
+		margin-bottom: 100px;
+	}
+	#masthead div{
+		margin-top: -70px;
+	}
+	.footer-outer-container{
+		z-index: -1;
+	}
+	.contact-info{
+		z-index: -1;
+	}
+	.m-relative{
+		position: relative;
+		z-index: -1;
+	}
+	.comedy-type{
+		width: 50%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.nav-outer-container .social-box{
+		position: absolute;
+    	top: -187px;
+	}
+	
 }
 
 .block {
@@ -924,6 +948,7 @@ p {
 	opacity: 0;
 }
 .footer-box{
+	z-index: -1000;
 	animation-name: fadein;
 	opacity: 0;
 	animation-fill-mode:forwards;

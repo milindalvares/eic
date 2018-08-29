@@ -1,11 +1,12 @@
 $(document).ready(function(){
 	resizeDiv();
-	var s = skrollr.init();
-
+	skrollrInit();
 });
+
 
 window.onresize = function(event) {
 	resizeDiv();
+	skrollrInit();
 }
 
 function resizeDiv() {
@@ -90,3 +91,18 @@ $(document).ready(function() {
           evt.preventDefault();
       });
  });
+
+//function Skrollr
+function skrollrInit() {
+
+    //initialize skrollr
+
+    skrollr.init({
+        smoothScrolling: false
+    });
+
+    // disable skrollr if using handheld device
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        skrollr.init().destroy();
+    }
+}

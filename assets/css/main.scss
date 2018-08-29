@@ -195,8 +195,9 @@ p {
 		color: #F6A623;
 	}
 	span {
-		font-size: 24px;
+		font-size: 1.6vw;
 		font-weight: 300;
+		margin-bottom:24px; 
 	}
 	.lead-link {
 		font-size: 18px;
@@ -208,7 +209,7 @@ p {
 	opacity: 0;
 	animation-fill-mode:forwards;
 	animation-duration: 1000ms;
-	animation-delay: 2500ms;
+	animation-delay: 2200ms;
 	img {
 		max-width: 100%;
 	}
@@ -282,8 +283,8 @@ p {
 	animation-name: animations_top;
 	opacity: 0;
 	animation-fill-mode:forwards;
-	animation-duration: 1000ms;
-	animation-delay: 3800ms;
+	animation-duration: 1s;
+	animation-delay: 3s;
 }
 
 .drop-up{
@@ -690,12 +691,16 @@ p {
 		display: none;
 	}
 	.title{
-		line-height: 1;
-		font-size:9vw;
+		line-height: .5;
+		/*font-size:9vw;*/
 		padding-left: 0;
 	}
 	.title h1{
 		font-size:9vw;
+	}
+	.title span{
+		font-size:4.5vw;
+		margin-bottom:10px; 
 
 	}
 /*	.comedy-nav-links{
@@ -707,7 +712,7 @@ p {
 		top: auto;
 	}
 	.profile-nav-link{
-		text-align: center;
+		/*text-align: center;*/
 	}
 	.mobile-hidden{
 		display: none !important;
@@ -808,13 +813,26 @@ p {
 
 #masthead {
 	margin-top: 2rem;
-	opacity: 0;
+/*	opacity: 0;
 	animation-name: fadein;
 	animation-fill-mode:forwards;
 	animation-duration: 1600ms;
+	animation-delay: 400ms;*/
+}
+#masthead span{
+	opacity: 0;
+	animation-name: fadein;
+	animation-fill-mode:forwards;
+	animation-duration: 1.6s;
 	animation-delay: 400ms;
 }
-
+#masthead h1{
+	opacity: 0;
+	animation-name: fadein;
+	animation-fill-mode:forwards;
+	animation-duration: 1s;
+	animation-delay: 1.4s;
+}
 .navbar-main-index {
 	background: #81bb40a1;
 	/*padding: 25px 0;*/
@@ -822,8 +840,8 @@ p {
 	animation-name: animations_top;
 	opacity: 0;
 	animation-fill-mode:forwards;
-	animation-duration: 1000ms;
-	animation-delay:3800ms;
+	animation-duration: 1s;
+	animation-delay:3s;
 }
 
 .homepage-image-container {
@@ -837,8 +855,8 @@ p {
 	animation-name: fadein;
 	opacity: 0;
 	animation-fill-mode:forwards;
-	animation-duration: 1000ms;
-	animation-delay: 3800ms;
+	animation-duration: 1s;
+	animation-delay: 3s;
 }
 
 .line-height-1{
@@ -952,8 +970,8 @@ p {
 	animation-name: fadein;
 	opacity: 0;
 	animation-fill-mode:forwards;
-	animation-duration: 1000ms;
-	animation-delay: 3800ms;
+	animation-duration: 1s;
+	animation-delay: 3s;
 }
 .nav-inner-container ul{
 		padding: 0;

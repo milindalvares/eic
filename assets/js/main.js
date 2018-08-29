@@ -77,6 +77,7 @@ $("a[href^='#']").click(function(e) {
 });
 
 $(document).ready(function() {
+	var formUrl= "http://128.199.218.232:89/eic-contact/";
       $('form').submit(function(evt){
       	console.log("inside form");
       	var $this = $(this);
@@ -85,12 +86,40 @@ $(document).ready(function() {
 		var contact = $('#phone').val();
 		var description = $('#description').val();
 		var formdata = $this.serialize();
-
 		console.log(formdata);
+		console.log(name);
+		if ($this.attr('id') == 'contact-us') {
+			console.log("sending...");
+			$('#contact-us .mail-button ').text("Sending...");
+		}
+		if (!name == '' && !email == '' && !contact == '' && !description == '') {
+			console.log("1");
+			$.ajax({
+				type: 'POST',
+				data: formdata,
+				url: formUrl,
+				success: function(data) {
+					console.log("mail sent");
+					clearForm();
+					 // location.reload();
+                },
+				error: function(data) {
+					console.log(data);
+					alert('Sorry, something went wrong! Please try again ');
+				}
+			});
+		}
 
-          evt.preventDefault();
+        evt.preventDefault();
       });
  });
+function clearForm() {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("description").value = "";
+    $('#contact-us .mail-button ').text("Send Mail");
+}
 
 //function Skrollr
 function skrollrInit() {

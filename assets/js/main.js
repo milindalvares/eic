@@ -3,7 +3,6 @@ $(document).ready(function(){
 	skrollrInit();
 });
 
-
 window.onresize = function(event) {
 	resizeDiv();
 	skrollrInit();
@@ -120,18 +119,36 @@ function clearForm() {
     document.getElementById("description").value = "";
     $('#contact-us .mail-button ').text("Send Mail");
 }
-
+var t;
 //function Skrollr
 function skrollrInit() {
 
     //initialize skrollr
+	if($(window).width() > 600)
+	{
 
-    skrollr.init({
-        smoothScrolling: false
-    });
+		 skrollr.init();
+		 t= 1;
+	    // disable skrollr if using handheld device
+	    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	        skrollr.init().destroy();
+	    }
+	    else{}
+	}
+	else {
 
-    // disable skrollr if using handheld device
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        skrollr.init().destroy();
-    }
+		if( t == 1){
+ 				
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+		        skrollr.init().destroy();
+	    	}
+
+			t=0;
+			}
+
+		else{} 
+
+	}
+
 }

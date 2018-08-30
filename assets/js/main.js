@@ -1,16 +1,11 @@
-// $(document).ready(function(){
-//     $(".nav-items").click(function(){
-//          $(this).addClass("active");
-//          $(this).parent().parent().find( '.nav-items.active' ).removeClass( 'active' );
-//     });
-// });
 $(document).ready(function(){
 	resizeDiv();
-
+	skrollrInit();
 });
 
 window.onresize = function(event) {
 	resizeDiv();
+	skrollrInit();
 }
 
 function resizeDiv() {
@@ -79,3 +74,81 @@ $("a[href^='#']").click(function(e) {
 		scrollTop: position
 	},1000 );
 });
+
+$(document).ready(function() {
+	var formUrl= "http://128.199.218.232:89/eic-contact/";
+      $('form').submit(function(evt){
+      	console.log("inside form");
+      	var $this = $(this);
+		var name = $('#name').val();
+		var email = $('#email').val();
+		var contact = $('#phone').val();
+		var description = $('#description').val();
+		var formdata = $this.serialize();
+		console.log(formdata);
+		console.log(name);
+		if ($this.attr('id') == 'contact-us') {
+			console.log("sending...");
+			$('#contact-us .mail-button ').text("Sending...");
+		}
+		if (!name == '' && !email == '' && !contact == '' && !description == '') {
+			console.log("1");
+			$.ajax({
+				type: 'POST',
+				data: formdata,
+				url: formUrl,
+				success: function(data) {
+					console.log("mail sent");
+					clearForm();
+					 // location.reload();
+                },
+				error: function(data) {
+					console.log(data);
+					alert('Sorry, something went wrong! Please try again ');
+				}
+			});
+		}
+
+        evt.preventDefault();
+      });
+ });
+function clearForm() {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("description").value = "";
+    $('#contact-us .mail-button ').text("Send Mail");
+}
+var t;
+//function Skrollr
+function skrollrInit() {
+
+    //initialize skrollr
+	if($(window).width() > 600)
+	{
+
+		 skrollr.init();
+		 t= 1;
+	    // disable skrollr if using handheld device
+	    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	        skrollr.init().destroy();
+	    }
+	    else{}
+	}
+	else {
+
+		if( t == 1){
+ 				
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+		        skrollr.init().destroy();
+	    	}
+
+			t=0;
+			}
+
+		else{} 
+
+	}
+
+}
